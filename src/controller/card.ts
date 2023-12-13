@@ -12,7 +12,6 @@ export = async (req: Request, res: Response): Promise<void> => {
       'card[exp_month]': card_exp_month,
       'card[cvc]': card_cvc,
       hasCvv: true,
-      test: true,
     };
     const token = await epayco.token.create(credit_info);
     res.status(201).json(token);

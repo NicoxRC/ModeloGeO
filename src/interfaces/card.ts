@@ -4,5 +4,4 @@ export interface CreditInterface {
   'card[exp_month]': string;
   'card[cvc]': string;
   hasCvv: boolean;
-  test: boolean;
 }
