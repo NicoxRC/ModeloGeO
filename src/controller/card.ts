@@ -3,7 +3,7 @@ import type { Request, Response } from 'express';
 import type { CreditInterface } from '../interfaces/card';
 
 export = async (req: Request, res: Response): Promise<void> => {
-  const { card_number, card_exp_year, card_exp_month, card_cvc } = req.query;
+  const { card_number, card_exp_year, card_exp_month, card_cvc } = req.params;
   console.log(card_number, card_exp_year, card_exp_month, card_cvc);
 
   try {
