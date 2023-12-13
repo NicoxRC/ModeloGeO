@@ -3,11 +3,10 @@ import type { Request, Response } from 'express';
 import type { CreditInterface } from '../interfaces/card';
 
 export = async (req: Request, res: Response): Promise<void> => {
-  const { card_number, card_exp_year, card_exp_month, card_cvc } = req.params;
-  console.log(card_number, card_exp_year, card_exp_month, card_cvc);
+  const { card_number, card_exp_year, card_exp_month, card_cvc } = req.body;
 
   try {
-    const credit_info = {
+    const credit_info: CreditInterface = {
       'card[number]': card_number,
       'card[exp_year]': card_exp_year,
       'card[exp_month]': card_exp_month,
