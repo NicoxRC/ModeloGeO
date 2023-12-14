@@ -14,5 +14,5 @@ type OmittedType = Omit<
 >;
 
 export type SubscriptionPayType = OmittedType & {
-  ip: string;
+  ip?: string;
 };

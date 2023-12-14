@@ -72,7 +72,8 @@ export const postPaySubscription = async (
   req: Request,
   res: Response
 ): Promise<void> => {
-  const { id_plan, customer, token_card, doc_type, doc_number, ip } = req.body;
+  const { id_plan, customer, token_card, doc_type, doc_number } = req.body;
+  const ip = req.ip;
 
   try {
     const subscription_info: SubscriptionPayType = {
