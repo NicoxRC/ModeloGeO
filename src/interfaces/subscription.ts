@@ -4,15 +4,8 @@ export interface SubscriptionInterface {
   token_card: string;
   doc_type: string;
   doc_number: string;
-  url_confirmation: string;
-  method_confirmation: string;
 }
 
-type OmittedType = Omit<
-  SubscriptionInterface,
-  'url_confirmation' | 'method_confirmation'
->;
-
-export type SubscriptionPayType = OmittedType & {
+export type SubscriptionPayType = {
   ip?: string;
 };
