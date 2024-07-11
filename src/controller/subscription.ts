@@ -1,8 +1,7 @@
 import epayco from '../connection';
 import type { Request, Response } from 'express';
 import type {
-  SubscriptionInterface,
-  SubscriptionPayType,
+  SubscriptionInterface
 } from '../interfaces/subscription';
 
 export const getSubscription = async (
@@ -72,7 +71,7 @@ export const postPaySubscription = async (
   const ip = req.ip;
 
   try {
-    const subscription_info: SubscriptionPayType = {
+    const subscription_info: any = {
       id_plan,
       customer,
       token_card,
