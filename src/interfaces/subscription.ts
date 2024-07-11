@@ -5,7 +5,3 @@ export interface SubscriptionInterface {
   doc_type: string;
   doc_number: string;
 }
-
-export type SubscriptionPayType = {
-  ip?: string;
-};
