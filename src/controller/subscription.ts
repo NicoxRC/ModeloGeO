@@ -45,8 +45,6 @@ export const postSubscription = async (
     token_card,
     doc_type,
     doc_number,
-    url_confirmation,
-    method_confirmation,
   } = req.body;
 
   try {
@@ -56,8 +54,6 @@ export const postSubscription = async (
       token_card,
       doc_type,
       doc_number,
-      url_confirmation,
-      method_confirmation,
     };
     const subscription = await epayco.subscriptions.create(subscription_info);
     res.status(201).json(subscription);
