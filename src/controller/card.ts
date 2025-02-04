@@ -14,6 +14,7 @@ export = async (req: Request, res: Response): Promise<void> => {
       hasCvv: true,
     };
     const token = await epayco.token.create(credit_info);
+    console.log(token);
     res.status(201).json(token);
   } catch (error: unknown) {
     error instanceof Error
