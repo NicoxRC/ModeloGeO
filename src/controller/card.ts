@@ -4,7 +4,6 @@ import type { CreditInterface } from '../interfaces/card';
 
 export = async (req: Request, res: Response): Promise<void> => {
   const { card_number, card_exp_year, card_exp_month, card_cvc } = req.body;
-
   try {
     const credit_info: CreditInterface = {
       'card[number]': card_number,
@@ -13,7 +12,6 @@ export = async (req: Request, res: Response): Promise<void> => {
       'card[cvc]': card_cvc,
       hasCvv: true,
     };
-    console.log(credit_info);
     const token = await epayco.token.create(credit_info);
     console.log(token);
     res.status(201).json(token);

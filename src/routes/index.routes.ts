@@ -3,9 +3,6 @@ import { Router } from 'express';
 
 const router = Router();
 
-//wordsCounter
-router.post('/palabras', controller.getWordsCounter);
-
 //Card
 router.post('/tokenCard', controller.card);
 
